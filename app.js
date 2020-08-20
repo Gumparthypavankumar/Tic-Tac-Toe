@@ -95,10 +95,22 @@ function checkgamestatus()
     else
     {
         xIsNext = !xIsNext;
-        if (xIsNext) {
-        status.innerHTML = `× is next`;
-        } else {
-        status.innerHTML = `○ is next`;
+        if(topLeft && topmiddle && topright && MiddleLeft && Middlemiddle && Middleright && bottomLeft && bottommiddle && bottomright)
+        {
+            status.innerHTML = `Game is Tie!`;
+            for(const celldiv of cellDivs)
+            {
+                celldiv.style.cursor = 'not-allowed';
+                status.style.color = 'red';
+            }
+        }
+        else
+        {
+            if (xIsNext) {
+            status.innerHTML = `× is next`;
+            } else {
+            status.innerHTML = `○ is next`;
+            }
         }
     }
 }

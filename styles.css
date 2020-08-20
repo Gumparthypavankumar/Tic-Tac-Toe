@@ -9,7 +9,7 @@ body
 {
     display:flex;
     color: #545454;
-    justify-content: center;
+    justify-content: space-around;
     align-items:center;
 }
 .container
@@ -88,8 +88,27 @@ body
 {
     color: #BD022F;
 }
-
+.rules{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:25px;
+}
+.rules h2
+{
+  text-align:center;
+  padding:5px;
+}
+.rules ol li{
+  margin-bottom:5px;
+}
+.rules ol li:first-child{
+  margin-top:5px;
+}
 @media only screen and (max-width: 1024px) {
+    body{
+      flex-direction:column;
+    }
     .game-grid {
       margin-top: 25px;
       grid-gap: 10px;
@@ -110,6 +129,9 @@ body
   }
   
   @media only screen and (max-width: 540px) {
+    body{
+      flex-direction:column;
+    }
     .container {
       margin: 25px;
       padding: 25px;
